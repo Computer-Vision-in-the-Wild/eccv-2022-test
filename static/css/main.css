@@ -106,6 +106,15 @@ header h4 {
     -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 }
 
+.speaker_picture {
+    border-radius: 200px;
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+}
+
 .alert-box {
     font-size: 15px;
     font-family: 'Source Sans Pro', sans-serif;
