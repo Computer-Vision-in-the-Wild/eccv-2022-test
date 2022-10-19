@@ -61,17 +61,12 @@
 
 .disclaimer {
     padding-left: 25px;
-}
-
-.disclaimer ul li {
-    font-size: 12px;
-    font-weight: 200;
     text-align: left;
-}
-.disclaimer p {
-    text-align: left;
-    font-weight: 200;
     font-size: 14px;
+    line-height: 16px;
+}
+.disclaimer b {
+    font-weight: bold !important;
 }
 </style>
 
@@ -833,9 +828,9 @@
                             </td>
                             <td style="padding-left:8px">
                                 <b>Invited Talk</b>
+                                <a href="https://xiaolonw.github.io/"><br>Xiaolong Wang (UC San Diego)</a>
                                 <br>
                                 <b>Title: TBD</b>
-                                <a href="https://xiaolonw.github.io/"><br>Xiaolong Wang (UC San Diego)</a>
                                 <br>
                                 <!-- <a target="_blank" href="https://youtu.be/SNwSukCtPM0">[Video]</a> -->
                                 <!-- <a target="_blank" href="https://drive.google.com/file/d/14Vg_zny0Qz2oQjk58WwN6QLBD5sybYd2/view?usp=sharing">[Slides]</a> -->
@@ -850,36 +845,15 @@
                             </td>
                             <td style="padding-left:8px">
                                 <b>Invited Talk</b>
+                                <a href="https://neilhoulsby.github.io/"><br>Neil Houlsby (Google)</a>
                                 <br>
                                 <b>Title: Architectures Beyond CNNs and Visual Scaling Laws</b>
-                                <a href="https://neilhoulsby.github.io/"><br>Neil Houlsby (Google)</a>
                                 <br>
                                 <!-- <a target="_blank" href="https://youtu.be/-iF4gkcdBx0">[Video]</a> -->
                                 <!-- <a target="_blank" href="https://drive.google.com/file/d/1SXK223NUXGz-Ayp2mzcBY9mS4W1-snLT/view?usp=sharing">[Slides]</a> -->
                                 <b>Abstract</b> <a class="abstract-toggle">[Expand]</a>
                                 <div class="abstract-content">
                                     I will present some of our work that has explored the capabilities of non-convolutional architectures for Computer Vision, such as Transformers, Mixers, and Mixture-of-expert based models. These architectures often demonstrate favourable properties in the context of transfer learning from a large source dataset to a small target datasets. In this context, I will discuss our exploration into these models' scaling laws, improved scaling law estimators, and the apparent saturation of larger vision models.
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td width=250>
-                                <center> <b>10:45 AM - 11:15 AM IDT</b> <br><br>(12:45 PM - 1:15 AM PT)</center> 
-                            </td>
-                            <td width=500>
-                                <center><img src="./static/eccv2022/img/speakers/xiaohua_zhai.jpeg"></center>
-                            </td>
-                            <td style="padding-left:8px">
-                                <b>Invited Talk</b>
-                                <br>
-                                <b>Title:  Scaling Vision and Language Learning with Vision Transformers</b>
-                                <a href="https://sites.google.com/view/xzhai"><br>Xiaohua Zhai (Google)</a> 
-                                <br>
-                                <!-- <a target="_blank" href="https://youtu.be/zCmzV2QXwMY">[Video]</a> -->
-                                <!-- <a target="_blank" href="https://drive.google.com/file/d/1VyOlRsGJNYSNfBnDJE8LSnFyuJNWmyfV/view?usp=sharing">[Slides]</a> -->
-                                <b>Abstract</b> <a class="abstract-toggle">[Expand]</a>
-                                <div class="abstract-content">
-                                    Attention-based neural networks such as the Vision Transformer (ViT) have recently achieved state-of-the-art results on many computer vision benchmarks. Scale is a primary ingredient in obtaining excellent results. In this talk, I will first present how to train a text model to "read out'' good representations from a pre-trained and locked Vision Transformer model for new tasks, named "Locked-image Tuning" (LiT). A LiT model gains the capability of zero-shot transfer to new vision tasks, such as image classification or retrieval. Then I will discuss how to use the mixture of experts model (LIMoE) for contrastive learning, which accepts both images and text simultaneously. Finally I will share how to reuse pre-trained ViT models and pre-trained encoder-decoder language models in PaLI, to support vision and language downstream tasks such as captioning and VQA across over 100 languages. When scaling up the PaLI visual component from ViT-G to ViT-e, we observed a significant boost on vision and language tasks.
                                 </div>
                             </td>
                         </tr>
@@ -892,15 +866,36 @@
                             </td>
                             <td style="padding-left:8px">
                                 <b>Invited Talk</b>
+                                <a href="http://matthias.minderer.net/"><br>Matthias Minderer (Google)</a>
                                 <br>
                                 <b>Title: Beyond image-level tasks: Scalable approaches to localization and dense prediction</b>
-                                <a href="http://matthias.minderer.net/"><br>Matthias Minderer (Google)</a>
                                 <br>
                                 <!-- <a target="_blank" href="https://youtu.be/C3CAW8fW8A4">[Video]</a> -->
                                 <!-- <a target="_blank" href="https://drive.google.com/file/d/1TxqePHlM8Ofa_7aY16QtXQ84jomIkynK/view?usp=sharing">[Slides]</a> -->
                                 <b>Abstract</b> <a class="abstract-toggle">[Expand]</a>
                                 <div class="abstract-content">
                                     Scaling of vision-language models has been very successful for image-level tasks such as classification and retrieval. I will present work on extending this approach beyond the image level, to structured tasks such as detection, segmentation, depth estimation, and colorization. I will first discuss a simple architecture and recipe for transferring vision-language models to open-vocabulary object detection (OWL-ViT). Second, I will discuss a general image modeling approach which combines a language and an image model to unify many dense prediction tasks (UViM). In this approach, the language model learns to represent structured, interdependent data features, while the image model efficiently deals with high-dimensional pixel-wise output. These methods are competitive with the respective state-of-the-art methods, while being simpler and more general.
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width=250>
+                                <center> <b>10:45 AM - 11:15 AM IDT</b> <br><br>(12:45 PM - 1:15 AM PT)</center> 
+                            </td>
+                            <td width=500>
+                                <center><img src="./static/eccv2022/img/speakers/xiaohua_zhai.jpeg"></center>
+                            </td>
+                            <td style="padding-left:8px">
+                                <b>Invited Talk</b>
+                                <a href="https://sites.google.com/view/xzhai"><br>Xiaohua Zhai (Google)</a> 
+                                <br>
+                                <b>Title:  Scaling Vision and Language Learning with Vision Transformers</b>
+                                <br>
+                                <!-- <a target="_blank" href="https://youtu.be/zCmzV2QXwMY">[Video]</a> -->
+                                <!-- <a target="_blank" href="https://drive.google.com/file/d/1VyOlRsGJNYSNfBnDJE8LSnFyuJNWmyfV/view?usp=sharing">[Slides]</a> -->
+                                <b>Abstract</b> <a class="abstract-toggle">[Expand]</a>
+                                <div class="abstract-content">
+                                    Attention-based neural networks such as the Vision Transformer (ViT) have recently achieved state-of-the-art results on many computer vision benchmarks. Scale is a primary ingredient in obtaining excellent results. In this talk, I will first present how to train a text model to "read out'' good representations from a pre-trained and locked Vision Transformer model for new tasks, named "Locked-image Tuning" (LiT). A LiT model gains the capability of zero-shot transfer to new vision tasks, such as image classification or retrieval. Then I will discuss how to use the mixture of experts model (LIMoE) for contrastive learning, which accepts both images and text simultaneously. Finally I will share how to reuse pre-trained ViT models and pre-trained encoder-decoder language models in PaLI, to support vision and language downstream tasks such as captioning and VQA across over 100 languages. When scaling up the PaLI visual component from ViT-G to ViT-e, we observed a significant boost on vision and language tasks.
                                 </div>
                             </td>
                         </tr>
@@ -944,13 +939,13 @@
                                 <center> <b>1 PM - 1:30 PM IDT</b> <br><br>(3 AM - 3:30 AM PT)</center> 
                             </td>
                             <td width=500>
-                                <center><img src="./static/eccv2022/img/speakers/yongqin_xian.png"></center>
+                                <center><img src=""></center>
                             </td>
                             <td style="padding-left:8px">
-                                <b>Invited Talk</b>
+                                <b>Challenge/Workshop Presentation</b>
                                 <br>
                                 <b>Title: TBD</b>
-                                <a href="https://xianyongqin.github.io/"><br>Yongqin Xian (Google)</a>
+                                <br>Speaker: TBD
                                 <br>
                                 <!-- <a target="_blank" href="https://youtu.be/C3CAW8fW8A4">[Video]</a> -->
                                 <!-- <a target="_blank" href="https://drive.google.com/file/d/1TxqePHlM8Ofa_7aY16QtXQ84jomIkynK/view?usp=sharing">[Slides]</a> -->
@@ -968,6 +963,23 @@
                                 <br>
                                 <b>Title: TBD</b>
                                 <a href="https://imisra.github.io/"><br>Ishan Misra (Meta)</a>
+                                <br>
+                                <!-- <a target="_blank" href="https://youtu.be/C3CAW8fW8A4">[Video]</a> -->
+                                <!-- <a target="_blank" href="https://drive.google.com/file/d/1TxqePHlM8Ofa_7aY16QtXQ84jomIkynK/view?usp=sharing">[Slides]</a> -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width=250>
+                                <center> <b>2 PM - 2:30 PM IDT</b> <br><br>(4 AM - 4:30 AM PT)</center> 
+                            </td>
+                            <td width=500>
+                                <center><img src="./static/eccv2022/img/speakers/yongqin_xian.png"></center>
+                            </td>
+                            <td style="padding-left:8px">
+                                <b>Invited Talk</b>
+                                <br>
+                                <b>Title: TBD</b>
+                                <a href="https://xianyongqin.github.io/"><br>Yongqin Xian (Google)</a>
                                 <br>
                                 <!-- <a target="_blank" href="https://youtu.be/C3CAW8fW8A4">[Video]</a> -->
                                 <!-- <a target="_blank" href="https://drive.google.com/file/d/1TxqePHlM8Ofa_7aY16QtXQ84jomIkynK/view?usp=sharing">[Slides]</a> -->
@@ -1051,9 +1063,9 @@
                             </td>
                             <td style="padding-left:8px">
                                 <b>Invited Talk</b>
+                                <a href="https://www1.icsi.berkeley.edu/~stellayu/"><br>Stella Yu (UC Berkley)</a>
                                 <br>
                                 <b>Title: Learning Mid-Level Vision from Nothing but Data</b>
-                                <a href="https://www1.icsi.berkeley.edu/~stellayu/"><br>Stella Yu (UC Berkley)</a>
                                 <br>
                                 <!-- <a target="_blank" href="https://youtu.be/C3CAW8fW8A4">[Video]</a> -->
                                 <!-- <a target="_blank" href="https://drive.google.com/file/d/1TxqePHlM8Ofa_7aY16QtXQ84jomIkynK/view?usp=sharing">[Slides]</a> -->
@@ -1898,10 +1910,7 @@
         </div>        
         <div class="row">
             <div class="disclaimer">
-                <p>Disclaimer</p>
-                <ul>
-                    <li>To ensure fair comparisons in the challenge, the evaluation server and leaderboards are independently developed and maintained by the <b>Workshop Organizers</b>, while the <b>Challege Organizers</b> actively promote and contribute to the competitions.</li>
-                </ul>
+                Disclaimer: To ensure fair comparisons in the challenge, the evaluation server and leaderboards are independently developed and maintained by the <b>Workshop Organizers</b>, while the <b>Challege Organizers</b> actively promote and contribute to the competitions.
             </div>
         </div>
         <hr>
