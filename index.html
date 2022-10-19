@@ -53,6 +53,26 @@
     margin-bottom: 4px;
     border-radius: 50%;
 }
+
+.abstract-content {
+    display: none;
+    padding: 5px;
+}
+
+.disclaimer {
+    padding-left: 25px;
+}
+
+.disclaimer ul li {
+    font-size: 12px;
+    font-weight: 200;
+    text-align: left;
+}
+.disclaimer p {
+    text-align: left;
+    font-weight: 200;
+    font-size: 14px;
+}
 </style>
 
 <body class="off-canvas hide-extras" style="min-width:1300px; min-height:750px;">
@@ -396,6 +416,22 @@
                     Please reach out if you have any issue in submissions.
                     <br><br>
 
+                    <strong style="color: red;">
+                        Please add a link to your participant team so that others can associate the submissions on the leaderboard with its corresponding team and work.
+                    </strong>
+                    
+                    <ul>
+                        <li>
+                            Click "Participation Teams" on the left side-bar
+                        </li>
+                        <li>
+                            Find  your participation team for the submission, click edit (the pencil icon)
+                        </li>
+                        <li>
+                            Update "Team URL (Optional)" with your paper ArXiv link, GitHub page, etc.
+                        </li>
+                    </ul>
+                    
                 </p>
             </div>
             <!-- <hr> -->
@@ -820,6 +856,10 @@
                                 <br>
                                 <!-- <a target="_blank" href="https://youtu.be/-iF4gkcdBx0">[Video]</a> -->
                                 <!-- <a target="_blank" href="https://drive.google.com/file/d/1SXK223NUXGz-Ayp2mzcBY9mS4W1-snLT/view?usp=sharing">[Slides]</a> -->
+                                <b>Abstract</b> <a class="abstract-toggle">[Expand]</a>
+                                <div class="abstract-content">
+                                    I will present some of our work that has explored the capabilities of non-convolutional architectures for Computer Vision, such as Transformers, Mixers, and Mixture-of-expert based models. These architectures often demonstrate favourable properties in the context of transfer learning from a large source dataset to a small target datasets. In this context, I will discuss our exploration into these models' scaling laws, improved scaling law estimators, and the apparent saturation of larger vision models.
+                                </div>
                             </td>
                         </tr>
                         <tr>
@@ -837,6 +877,10 @@
                                 <br>
                                 <!-- <a target="_blank" href="https://youtu.be/zCmzV2QXwMY">[Video]</a> -->
                                 <!-- <a target="_blank" href="https://drive.google.com/file/d/1VyOlRsGJNYSNfBnDJE8LSnFyuJNWmyfV/view?usp=sharing">[Slides]</a> -->
+                                <b>Abstract</b> <a class="abstract-toggle">[Expand]</a>
+                                <div class="abstract-content">
+                                    Attention-based neural networks such as the Vision Transformer (ViT) have recently achieved state-of-the-art results on many computer vision benchmarks. Scale is a primary ingredient in obtaining excellent results. In this talk, I will first present how to train a text model to "read out'' good representations from a pre-trained and locked Vision Transformer model for new tasks, named "Locked-image Tuning" (LiT). A LiT model gains the capability of zero-shot transfer to new vision tasks, such as image classification or retrieval. Then I will discuss how to use the mixture of experts model (LIMoE) for contrastive learning, which accepts both images and text simultaneously. Finally I will share how to reuse pre-trained ViT models and pre-trained encoder-decoder language models in PaLI, to support vision and language downstream tasks such as captioning and VQA across over 100 languages. When scaling up the PaLI visual component from ViT-G to ViT-e, we observed a significant boost on vision and language tasks.
+                                </div>
                             </td>
                         </tr>
                         <tr>
@@ -854,6 +898,10 @@
                                 <br>
                                 <!-- <a target="_blank" href="https://youtu.be/C3CAW8fW8A4">[Video]</a> -->
                                 <!-- <a target="_blank" href="https://drive.google.com/file/d/1TxqePHlM8Ofa_7aY16QtXQ84jomIkynK/view?usp=sharing">[Slides]</a> -->
+                                <b>Abstract</b> <a class="abstract-toggle">[Expand]</a>
+                                <div class="abstract-content">
+                                    Scaling of vision-language models has been very successful for image-level tasks such as classification and retrieval. I will present work on extending this approach beyond the image level, to structured tasks such as detection, segmentation, depth estimation, and colorization. I will first discuss a simple architecture and recipe for transferring vision-language models to open-vocabulary object detection (OWL-ViT). Second, I will discuss a general image modeling approach which combines a language and an image model to unify many dense prediction tasks (UViM). In this approach, the language model learns to represent structured, interdependent data features, while the image model efficiently deals with high-dimensional pixel-wise output. These methods are competitive with the respective state-of-the-art methods, while being simpler and more general.
+                                </div>
                             </td>
                         </tr>
                         <tr>
@@ -1848,6 +1896,15 @@
             </div> 
             <hr>
         </div>        
+        <div class="row">
+            <div class="disclaimer">
+                <p>Disclaimer</p>
+                <ul>
+                    <li>To ensure fair comparisons in the challenge, the evaluation server and leaderboards are independently developed and maintained by the <b>Workshop Organizers</b>, while the <b>Challege Organizers</b> actively promote and contribute to the competitions.</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
     </div>
 
 </div>
@@ -1897,6 +1954,24 @@
             }
         });
     });
+    </script>
+    <script>
+        $(".abstract-toggle").click(function () {
+
+        $header = $(this);
+        //getting the next element
+        $content = $header.next();
+        //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+        $content.slideToggle(500, function () {
+            //execute this after slideToggle is done
+            //change text of header based on visibility of content div
+            $header.text(function () {
+                //change text based on condition
+                return $content.is(":visible") ? "[Collapse]" : "[Expand]";
+            });
+        });
+
+        });
     </script>
 </body>
 
